@@ -3,11 +3,12 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken");
 const nodemailer = require('nodemailer')
 require("dotenv").config()
-
+var crypto = require('crypto');
+const iv = 1
 let otp;
 
-function generate_otp(){
-    otp = Math.floor(Math.random()*1000000)
+function generate_otp() {
+    otp = Math.floor(Math.random() * 1000000)
 }
 
 
@@ -26,7 +27,7 @@ const signUp = async (req, res) => {
         })
         // const token = jwt.sign({ email: result.email, id: result._id }, process.env.SECRET_KEY)
         // res.status(201).json({ user: result, token: token })
-        res.status(201).json({ user: result})
+        res.status(201).json({ user: result })
     } catch (error) {
         res.status(500).json({ message: "something went wrong", msg: error.message })
     }
@@ -35,7 +36,7 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
     const { emailin, passin } = req.body
     try {
-        const  existinguser  = await userModel.findOne({ email: emailin })
+        const existinguser = await userModel.findOne({ email: emailin })
         if (!existinguser) {
             return res.status(400).json({ message: "User not found" })
         }
@@ -54,50 +55,61 @@ const signIn = async (req, res) => {
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'amaanshaikh786420@gmail.com',
-      pass: process.env.GMAIL_PASSWORD
+        user: 'amaanshaikh786420@gmail.com',
+        pass: process.env.GMAIL_PASSWORD
     }
-  });
-const forgotPassword =async(req,res)=>{
+});
+const forgotPassword = async (req, res) => {
     try {
-        const emailforgot = req.body
+        var emailforgot = req.body
         generate_otp()
         var mailOptions = {
             from: 'amaanshaikh786420@gmail.com',
             to: emailforgot.emailforgot,
-            subject: `OTP verification` ,
+            subject: `OTP verification`,
             text: `Your OTP is ${otp}`
-          };
-          await transporter.sendMail(mailOptions, function(error, info){
+        };
+        await transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
-                res.status(400).json({message:"Email sent UNsuccessfully",err:error.message})
+                res.status(400).json({ message: "Email sent UNsuccessfully", err: error.message })
             } else {
-                res.render('otp_verify')
-                // res.redirect(`/otp_verify?email=${emailforgot.emailforgot}`);
+                // var encrypt = crypto.createCipheriv('aes256', process.env.SYMMETRIC_KEY,iv);
+                // encrypt.update(emailforgot.emailforgot, 'utf8', 'hex');
+                // const encrypted = encrypt.final('hex')
+                // res.redirect(307,`/otp_verify/${encrypted}`)
+                res.redirect(307,`/otp_verify/${emailforgot.emailforgot}`)
             }
-          });
+        });
     } catch (error) {
-        res.status(400).json({message:error.message})
+        res.status(400).json({ message: error.message })
     }
 
 }
 
-const otp_verify = async(req,res)=>{
+const forgotPass = async (req, res) => {
+    return res.render("forgotPass")
+}
+
+const otp_verify = async (req, res) => {
     try {
         const otp_get = req.body.otp
         const new_password = req.body.newpass
-        const email = req.body.email
-        if(otp_get == otp){
+        const email = req.params.email
+        console.log(email)
+        // var decrypt = crypto.createDecipheriv('aes256', process.env.SYMMETRIC_KEY,iv);
+        // decrypt.update(email, 'hex', 'utf8')
+        // decrypt.final()
+        if (otp_get == otp) {
             const hashedPassword = await bcrypt.hash(new_password, 10)
-            const  existinguser  = await userModel.findOneAndUpdate({ email: email },{password:hashedPassword})
-            return res.render('index')
+            const existinguser = await userModel.findOneAndUpdate({ email: email }, { password: hashedPassword })
+            return res.render('indexx')
         }
-        else{
+        else {
             return res.render('otp_verify')
         }
     } catch (error) {
-        res.status(400).json({msgee:error.message})
+        res.status(400).json({ msgee: error.message })
     }
 }
 
-module.exports = { signUp, signIn ,forgotPassword,otp_verify}
+module.exports = { signUp, signIn, forgotPassword, otp_verify, forgotPass }
