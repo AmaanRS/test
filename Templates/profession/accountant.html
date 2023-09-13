@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accountant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.gstatic.com/s/muli/v28/7Auwp_0qiz-afTLGLQjUwkQ.woff2" as="font"
+        type="font/woff2" crossorigin="">
+    <link rel="preload"
+        href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK-F2qC0s.woff2"
+        as="font" type="font/woff2" crossorigin="">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style1.css">
+    <style>
+        .dropdown-menu.show.drop {
+            width: max-content;
+        }
+
+        /* Set the container width */
+        .container {
+            width: 500px;
+            /* Adjust the width as needed */
+            margin: 0 auto;
+        }
+
+        /* Adjust tab styles */
+        #tabs {
+            width: 100%;
+            /* Full width within the container */
+        }
+
+        /* Adjust tab content styles */
+        #tab-contents {
+            width: 100%;
+            /* Full width within the container */
+        }
+
+        /* Adjust other styles as needed */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="/images/expert_cv-removebg-preview.png" alt=""
+                    style="width: 103px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#template" style="color: white;">templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">create cv</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: white;">
+                            Profession
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="row" style="width: max-content;">
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><a class="dropdown-item" href="profession/mba.html" id="a-SR6M2C"
+                                                aria-label="MBA YrTxNX" tabindex="27">MBA</a></li>
+                                        <li><a class="dropdown-item" href="profession/medical.html" id="a-bMwl7n"
+                                                aria-label="Medical Sales D4Oby6" tabindex="28">Medical
+                                                Sales</a></li>
+                                        <li><a class="dropdown-item" href="profession/nursing.html" id="a-Y6X4ec"
+                                                aria-label="Nursing tGV1sR" tabindex="29">Nursing</a></li>
+                                        <li><a class="dropdown-item" href="profession/nursingstudent.html" id="a-qOxXzC"
+                                                aria-label="Nursing Student 4muDR0" tabindex="30">Nursing Student</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/operationsmanager.html"
+                                                id="a-6siDdK" aria-label="Operations Manager tTpoMj"
+                                                tabindex="31">Operations Manager</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/pharmacist.html" id="a-w7qVz0"
+                                                aria-label="Pharmacist 0pXAnB" tabindex="32">Pharmacist</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/phlebotomist.html" id="a-UBYMaQ"
+                                                aria-label="Phlebotomist S7gmLx" tabindex="33">Phlebotomist</a></li>
+                                        <li><a class="dropdown-item" href="profession/productmanager.html" id="a-oEGbw1"
+                                                aria-label="Product Manager eX5a84" tabindex="34">Product Manager</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/projectmanager.html" id="a-F5WfMi"
+                                                aria-label="Project Manager i2uvw6" tabindex="35">Project Manager</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/receptionist.html" id="a-etZLdb"
+                                                aria-label="Receptionist WAPSIY" tabindex="36">Receptionist</a></li>
+                                        <li><a class="dropdown-item" href="profession/registerednurse.html"
+                                                id="a-j65d4c" aria-label="Registered Nurse yazNo6"
+                                                tabindex="37">Registered Nurse</a></li>
+                                        <li><a class="dropdown-item" href="profession/sales.html" id="a-oZMWk5"
+                                                aria-label="Sales gD9ZWJ" tabindex="38">Sales</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/salesassociate.html" id="a-5oM2rl"
+                                                aria-label="Sales Associate fo7Wir" tabindex="39">Sales
+                                                Associate</a></li>
+                                        <li><a class="dropdown-item" href="profession/server.html" id="a-uFgd8m"
+                                                aria-label="Server HbAvB9" tabindex="40">Server</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/socialwork.html" id="a-ocJrTP"
+                                                aria-label="Social Work b0iymc" tabindex="41">Social
+                                                Work</a></li>
+                                        <li><a class="dropdown-item" href="profession/softwaredeveloper.html"
+                                                id="a-loXzSx" aria-label="Software Developer QOEayW"
+                                                tabindex="42">Software
+                                                Developer</a></li>
+                                        <li><a class="dropdown-item" href="profession/softwareengineer.html"
+                                                id="a-ixWBFh" aria-label="Software Engineer nsfhmP"
+                                                tabindex="43">Software Engineer</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/stayathomemom.html" id="a-O7mJhn"
+                                                aria-label="Stay-at-Home Mom NTAZnr" tabindex="44">Stay-at-Home Mom</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/student.html" id="a-xZH6q7"
+                                                aria-label="Student APxUW0" tabindex="45">Student</a></li>
+                                        <li><a class="dropdown-item" href="profession/teacher.html" id="a-ahNmB1"
+                                                aria-label="Teacher R184bB" tabindex="46">Teacher</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">
+                                        <li><a class="dropdown-item" href="profession/administrative.html" id="a-wkQpNu"
+                                                aria-label="Accountant yi4flm" tabindex="7">Accountant</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/administrative.html" id="a-8eEjvN"
+                                                aria-label="Administrative Assistant PExdCo" tabindex="8">Administrative
+                                                Assistant</a></li>
+                                        <li><a class="dropdown-item" href="profession/artist.html" id="a-kIoYPc"
+                                                aria-label="Artist WPJNCb" tabindex="9">Artist</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/business.html" id="a-k2FJHm"
+                                                aria-label="Business B6Vezg" tabindex="10">Business</a></li>
+                                        <li><a class="dropdown-item" href="profession/caregiver.html" id="a-Yyx41N"
+                                                aria-label="Caregiver aqAyKP" tabindex="11">Caregiver</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/cashier.html" id="a-fmrin4"
+                                                aria-label="Cashier TBIXdi" tabindex="12">Cashier</a></li>
+                                        <li><a class="dropdown-item" href="profession/certifiednusrse.html"
+                                                id="a-vJIpMh" aria-label="Certified Nursing Assistant l1Yh5b"
+                                                tabindex="13">Certified
+                                                Nursing
+                                                Assistant</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/college.html" id="a-oxIJuq"
+                                                aria-label="College 1YF2ZV" tabindex="14">College</a></li>
+                                        <li><a class="dropdown-item" href="profession/computersci.html" id="a-qV89GZ"
+                                                aria-label="Computer Science Hq9BrY" tabindex="15">Computer
+                                                Science</a></li>
+                                        <li><a class="dropdown-item" href="profession/customerser.html" id="a-gS4NMU"
+                                                aria-label="Customer Service Representative C6KM02"
+                                                tabindex="16">Customer
+                                                Service
+                                                Representative</a></li>
+                                        <li><a class="dropdown-item" href="profession/dentalassis.html" id="a-FpxE30"
+                                                aria-label="Dental Assistant qU0C9f" tabindex="17">Dental
+                                                Assistant</a></li>
+                                        <li><a class="dropdown-item" href="profession/enginerr.html" id="a-SmwHPo"
+                                                aria-label="Engineering 6jf7LP" tabindex="18">Engineering</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/esthetician.html" id="a-akg6hm"
+                                                aria-label="Esthetician L51gdN" tabindex="19">Esthetician</a></li>
+                                        <li><a class="dropdown-item" href="profession/executive.html" id="a-wiSlf6"
+                                                aria-label="Executive mhDWPs" tabindex="20">Executive</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/financial.html" id="a-pWX97I"
+                                                aria-label="Financial Analyst CDvywM" tabindex="21">Financial
+                                                Analyst</a></li>
+                                        <li><a class="dropdown-item" href="profession/highschool.html" id="a-2GeuA1"
+                                                aria-label="High School t1umBq" tabindex="22">High
+                                                School</a></li>
+                                        <li><a class="dropdown-item" href="profession/housekeeping.html" id="a-lrHKtV"
+                                                aria-label="Housekeeping prysSh" tabindex="23">Housekeeping</a></li>
+                                        <li><a class="dropdown-item" href="profession/informationtechnology.html"
+                                                id="a-I6yNiF" aria-label="Information Technology IT 5sh0Kj"
+                                                tabindex="24">Information
+                                                Technology
+                                                IT</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/internship.html" id="a-mHAFBs"
+                                                aria-label="Internship JqMBnQ" tabindex="25">Internship</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="profession/management.html" id="a-0numFo"
+                                                aria-label="Management mLE167" tabindex="26">Management</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Profession
+                    </a>
+
+                </li>
+
+
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">Login/sign up</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    <header class="page-header gradient" style="background: black; background-size: cover;background-repeat:no-repeat;"">
+        <div class=" container" style="padding-top:5px;">
+        <div class="row" style="padding-bottom: 172px;padding-right: 1px;padding-top:2px;                text-align: center;
+        ">
+
+            <div class="col">
+                <p style="
+                color: #f2dddd;
+                font-weight: bold;
+                font-size: 40px;
+                text-align: center;
+                width: 100%;
+                padding-top:2px; 
+                height: 200px;
+            ">
+                    Accountant Resume Examples and Templates for 2023 </p>
+                <button class="btn btn-primary"><a href="https://cv-host.onrender.com/Form.html" style="color:white;              
+                        text-decoration:none;">
+                        create Resume
+                    </a></button>
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+
+    <div class="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+        <div class="w-full relative flex items-center justify-center">
+            <button aria-label="slide backward"
+                class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer"
+                id="prev">
+                <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+                <div id="slider"
+                    class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/fDngH9G/carosel-1.png" alt="black chair and white table"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 1</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/DWrGxX6/carosel-2.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/tCfVky2/carosel-3.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/rFsGfr5/carosel-4.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/fDngH9G/carosel-1.png" alt="black chair and white table"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/DWrGxX6/carosel-2.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/tCfVky2/carosel-3.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/rFsGfr5/carosel-4.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/fDngH9G/carosel-1.png" alt="black chair and white table"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/DWrGxX6/carosel-2.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/tCfVky2/carosel-3.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <img src="https://i.ibb.co/rFsGfr5/carosel-4.png" alt="sitting area"
+                            class="object-cover object-center w-full" />
+                        <div class="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
+                            <h2 class="lg:text-xl leading-4 text-base lg:leading-5 text-white dark:text-gray-900">
+                                Catalog 2</h2>
+                            <div class="flex h-full items-end pb-6">
+                                <h3
+                                    class="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white dark:text-gray-900">
+                                    Minimal Interior</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button aria-label="slide forward"
+                class="absolute z-30 right-0 mr-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                id="next">
+                <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <p class="d-inline-flex gap-1">
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
+            aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+            aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both
+            elements</button>
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <img src="https://cv-host.onrender.com/images/T2.PNG" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    <img src="https://cv-host.onrender.com/images/T2.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="margin-top: 10px;">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#template">template</a></li>
+            <li><a href="">create cv</a></li>
+            <li><a href="#profession">Profession</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+        <p>&copy2021 Prakash Sahu | All Rights Reserved</p>
+    </footer>
+    <script>let defaultTransform = 0;
+        function goNext() {
+            defaultTransform = defaultTransform - 398;
+            var slider = document.getElementById("slider");
+            if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
+            slider.style.transform = "translateX(" + defaultTransform + "px)";
+        }
+        next.addEventListener("click", goNext);
+        function goPrev() {
+            var slider = document.getElementById("slider");
+            if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
+            else defaultTransform = defaultTransform + 398;
+            slider.style.transform = "translateX(" + defaultTransform + "px)";
+        }
+        prev.addEventListener("click", goPrev);
+    </script>
+
+
+
+
+</body>
+
+</html>

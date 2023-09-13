@@ -1,0 +1,32 @@
+.tem {
+    padding-top: 1rem;
+    text-align: center;
+    background: rgb(8, 8, 8);
+    color: white;
+}
+
+.p {
+    font-size: 6rem;
+}
+.a{
+    text-decoration: none;
+}
+/* Define the animation */
+/* Define the animation */
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the element */
+.animate-on-scroll {
+    opacity: 0; /* Start with opacity set to 0 */
+    animation: slide-up 1s ease-in-out forwards;
+}
+
