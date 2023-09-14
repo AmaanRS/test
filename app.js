@@ -20,8 +20,12 @@ app.use(cors());
 //Serve html templates
 app.set('views', path.join(__dirname, 'public/Templates'));
 
+// app.set('views', path.join(__dirname, 'ExpertCV-main'));
+
 // Serve static files (e.g., CSS, images)
-app.use('/static',express.static(path.join(__dirname, 'public')));
+app.use('/public',express.static(path.join(__dirname, 'public')));
+
+// app.use('/new',express.static(path.join(__dirname,'ExpertCV-main')));//Check this for images or css error
 
 
 
@@ -30,7 +34,7 @@ app.use('/',router)
 
 
 app.get("/",(req,res)=>{
-    res.render('indexx')
+    res.render('index.ejs',{"token":undefined,"existinguser":undefined})
 })
 
 

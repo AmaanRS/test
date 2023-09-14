@@ -1,0 +1,268 @@
+.tem {
+  margin: 4rem 0rem -1rem 0rem;
+  text-align: center;
+  color: white;
+}
+hr {
+  background-color: black; /* Background color (visible if height > 2px) */
+  height: 5px; /* Height of the horizontal rule */
+  border: none; /* Remove the default border */
+  margin: 80px 0; /* Margin above and below the <hr> element */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.he1 {
+  background-color: rgb(230, 235, 235);
+}
+.d-flex{
+  position: absolute;
+  right: 5px;
+}
+
+.gradient {
+  background: url(Resume-Builder-master/images/img1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 380px;
+  margin-top: -15px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Apply the Montserrat font to the modal and its content */
+.modal {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Center the modal vertically and horizontally */
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100% - 40px);
+  /* Adjust for modal's padding */
+  margin: 0;
+}
+
+/* Style the modal content */
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+  overflow: hidden;
+  width: 100%;
+  max-width: 768px;
+  /* Adjust as needed */
+  min-height: 480px;
+  /* Adjust as needed */
+}
+
+/* Center the modal title */
+.modal-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Center the modal body content */
+.modal-body {
+  text-align: center;
+}
+
+/* Center the modal footer content */
+.modal-footer {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style modal buttons */
+.modal-footer button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background: #ff445c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.modal-footer button:active {
+  transform: scale(.95);
+}
+
+.modal-footer button:focus {
+  outline: none;
+}
+
+.modal-footer button.ghost {
+  background: transparent;
+  border-color: #fff;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+
+footer .social_icon li a {
+  font-size: 2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+  transform: translateY(-15px);
+  color: blue;
+}
+
+footer .menu li a {
+  font-size: 1.2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+p {
+  color: #eee;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/*wave and animation*/
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://i.ibb.co/rZt4Nhg/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+.para {
+  color: black;
+}
+
+@keyframes animateWave {
+  0% {
+      background-position-x: 1000px;
+  }
+
+  100% {
+      background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+      background-position-x: 0px;
+  }
+
+  100% {
+      background-position-x: 1000px;
+  }
+}
+
+.p {
+  font-size: 6rem;
+}
+
+.a {
+  text-decoration: none;
+}
+
+/* Define the animation */
+/* Define the animation */
+@keyframes slide-up {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Apply the animation to the element */
+.animate-on-scroll {
+  opacity: 0;
+  /* Start with opacity set to 0 */
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+.para {
+  text-align: left;
+  color: #eee;
+}
+.card-img-top {
+  height: 400px;
+}

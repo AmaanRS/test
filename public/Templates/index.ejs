@@ -1,84 +1,985 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/muli/v28/7Auwp_0qiz-afTLGLQjUwkQ.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK-F2qC0s.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" type="text/ejs" href="../css/index.css" />
+    <link rel="icon" href="images/RB_Logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Resume_Builder</title>
+  </head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <body style="background-color: #302f3b">
+    <!-- Button trigger modal -->
 
-    <title>INDEX PAGE</title>
-</head>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+      style="padding-left: 25%"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Login or Sign Up
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-<body>
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="myTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="login-tab"
+                  data-bs-toggle="tab"
+                  href="#login"
+                  role="tab"
+                  aria-controls="login"
+                  aria-selected="true"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="signup-tab"
+                  data-bs-toggle="tab"
+                  href="#signup"
+                  role="tab"
+                  aria-controls="signup"
+                  aria-selected="false"
+                  tabindex="-1"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- Login Tab -->
+              <div
+                class="tab-pane fade show active"
+                id="login"
+                role="tabpanel"
+                aria-labelledby="login-tab"
+              >
+                <!-- Login Form -->
+                <form action="/signIn" method="post">
+                  <!-- Add your login form elements here -->
+                  <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="loginEmail"
+                      placeholder="Email" name="emailin" required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="loginPassword"
+                      placeholder="Password" name="passin" required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+              </div>
+
+              <!-- Sign Up Tab -->
+              <div
+                class="tab-pane fade"
+                id="signup"
+                role="tabpanel"
+                aria-labelledby="signup-tab"
+              >
+                <!-- Sign Up Form -->
+                <form action="/signUp" method="post">
+                  <!-- Add your signup form elements here -->
+                  <div class="form-group">
+                    <label for="signupName">Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="signupName"
+                      placeholder="Name" name="usernameup" required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="signupEmail"
+                      placeholder="Email" name="emailup" required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="signupPassword"
+                      placeholder="Password" name="passup"  required
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
             </button>
+          </div>
         </div>
-        </div>
-    </nav>
-    <div class="container">
-        <h1>SignUp</h1>
-        <form class="container" method="post" action="/signUp">
-            <div class="mb-3">
-                <label for="exampleInputUsername1" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername1" name="usernameup">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input name="emailup" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input name="passup" type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <br>
-        <h1>SignIn</h1>
-        <form class="container" method="post" action="/signIn">
-            <div class="mb-3">
-                <label for="exampleInputEmail2" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="emailin">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword2" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword2" name="passin">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <br>
-        <h1>Forgot password</h1>
-        <form class="container" method="post" action="/forgotPassword">
-            <div class="mb-3">
-                <label for="exampleInputEmail3" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" name="emailforgot">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+      </div>
     </div>
-    <br>
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img src="public/images/2-removebg-preview.png" alt="" style="width: 103px"
+        /></a>
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="color: white"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#template" style="color: white"
+                >templates</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white">create cv</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#profession" style="color: white"
+                >profession</a
+              >
+            </li>
+          </ul>
+          <% if (token) { %>  
+            <form class="d-flex" role="search">
+              <button
+                class="btn btn-outline-success"
+                type="button"
+              >
+              <%= existinguser %>
+                
+              </button>
+            </form>
+            <% } else { %>
+              <form class="d-flex" role="search">
+                <button
+                  class="btn btn-outline-success"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Login/sign up
+                </button>
+              </form>
+              <% } %>
+           
+        </div>
+      </div>
+    </nav>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-</body>
+    <header
+      class="page-header container-fluid gradient"
+      style="background: url('/public/images/img1.png')"
+    >
+      <div class="col-lg-4">
+        <p
+          style="
+            color: #f2dddd;
+            font-weight: bold;
+            font-size: 40px;
+            padding-top: 115px;
+            text-align: left;
+          "
+        >
+          create Your professional Resume with the expert
+        </p>
+        <button class="btn btn-primary">
+          <a href="Form.html" style="color: white; text-decoration: none">
+            create Resume
+          </a>
+        </button>
+      </div>
+    </header>
+    <div class="container-fluid" id="template">
+      <h1 class="tem">Make a resume that stands out</h1>
+      <p
+        style="
+          padding: 0.3rem;
+          text-align: center;
+          font-size: 18px;
+          color: white;
+          margin: 1rem 0rem 4rem 0rem;
+        "
+      >
+        Increase your chances of getting a job by creating your resume with our
+        well designed resume templates.
+      </p>
+      <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="row"
+                style="
+                  margin-top: 10px;
+                  margin-right: 105px;
+                  margin-left: 171px;
+                "
+              >
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                    <img src="public/images/T2.PNG" class="card-img-top" alt="..." />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                    <img src="public/images/T1.PNG" class="card-img-top" alt="..." />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                    <img src="public/images/T3.PNG" class="card-img-top" alt="..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="row"
+                style="
+                  margin-top: 10px;
+                  margin-right: 105px;
+                  margin-left: 171px;
+                "
+              >
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                    <img src="public/images/T1.PNG" class="card-img-top" alt="..." />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                    <img src="public/images/T2.PNG" class="card-img-top" alt="..." />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card" style="width: 18rem">
+                    <img src="public/images/T3.PNG" class="card-img-top" alt="..." />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bg-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bg-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container features" style="padding-top: 3px">
+      <h1 style="margin: 4rem 0rem 4rem 0rem; text-align: center; color: white">
+        Features
+      </h1>
+      <div class="row">
+        <div
+          class="card mb-3 bg-dark"
+          style="max-width: 100%; justify-content: center"
+        >
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="public/images/R1.png"
+                class="img-fluid rounded-start mt-4 ml-4"
+                style="height: 73%; width: 50%"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="card-title" style="color: white">
+                  Quick and easy resume builder
+                </h2>
+                <p class="card-text para" style="padding-top: 2.5rem">
+                  With our online CV maker, it is simple for anyone to quickly
+                  create a professional CV. Enter your personal details and
+                  begin filling out your CV content. Finally, choose one of our
+                  available CV layouts, and download your CV.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card mb-3 bg-dark" style="max-width: 100%">
+          <div class="row g-0">
+            <div class="col-md-4" style="justify-content: center">
+              <img
+                src="public/images/R2.png"
+                class="img-fluid mt-3 ml-4"
+                style="height: 90%; width: 60%"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="card-title" style="color: white">
+                  More likely to land a job
+                </h2>
+                <p class="card-text para" style="padding-top: 2.5rem">
+                  With a representative and professional CV, you will stand out
+                  amongst all other applicants. You are also up to 65% more
+                  likely to be invited to an interview.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card mb-3 bg-dark" style="max-width: 100%">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="public/images/R3.png"
+                class="img-fluid rounded-start mx-auto mt-2"
+                style="width: 240px; height: 210px"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="card-title" style="color: white">
+                  Oragnize your applications
+                </h2>
+                <p class="card-text para">
+                  Often, it is important to be able to tailor your CV based on
+                  the job you wish to apply for. With CV maker, you can create
+                  and manage several different CVs in an organised way through
+                  your own personal account hub.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
 
+    <div
+      class="row"
+      style="
+        padding-left: 15px;
+        padding-bottom: 90px;
+        width: 101%;
+        padding-top: px;
+      "
+      id="profession"
+    >
+      <h1
+        class="he1 dark"
+        style="
+          text-align: center;
+          margin: 3rem 0rem 3rem 0rem;
+          background-color: #302f3b;
+          color: white;
+        "
+      >
+        Profession
+      </h1>
+      <p
+        style="
+          text-align: center;
+          margin: 0rem 0rem 0rem 0rem;
+          display: block;
+          color: white;
+        "
+      >
+        Need help building your resume? Get started with our resume examples,
+        which are based on thousands of winning resumes. You can build the
+        perfect resume for the job you want using our comprehensive directory of
+        resume examples.
+      </p>
+      <div class="col">
+        <img
+          src="https://www.resumebuilder.com/wp-content/themes/resumebuilder/assets/images/resume-examples-img.svg"
+          alt=""
+        />
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a
+              href="profession/accountant.html"
+              id="a-wkQpNu"
+              aria-label="Accountant yi4flm"
+              tabindex="7"
+              >Accountant</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/administrative.html"
+              id="a-8eEjvN"
+              aria-label="Administrative Assistant PExdCo"
+              tabindex="8"
+              >Administrative Assistant</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/artist.html"
+              id="a-kIoYPc"
+              aria-label="Artist WPJNCb"
+              tabindex="9"
+              >Artist</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/business.html"
+              id="a-k2FJHm"
+              aria-label="Business B6Vezg"
+              tabindex="10"
+              >Business</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/caregiver.html"
+              id="a-Yyx41N"
+              aria-label="Caregiver aqAyKP"
+              tabindex="11"
+              >Caregiver</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/cashier.html"
+              id="a-fmrin4"
+              aria-label="Cashier TBIXdi"
+              tabindex="12"
+              >Cashier</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/certifiednusrse.html"
+              id="a-vJIpMh"
+              aria-label="Certified Nursing Assistant l1Yh5b"
+              tabindex="13"
+              >Certified Nursing Assistant</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/college.html"
+              id="a-oxIJuq"
+              aria-label="College 1YF2ZV"
+              tabindex="14"
+              >College</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/computersci.html"
+              id="a-qV89GZ"
+              aria-label="Computer Science Hq9BrY"
+              tabindex="15"
+              >Computer Science</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/customerser.html"
+              id="a-gS4NMU"
+              aria-label="Customer Service Representative C6KM02"
+              tabindex="16"
+              >Customer Service Representative</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/dentalassis.html"
+              id="a-FpxE30"
+              aria-label="Dental Assistant qU0C9f"
+              tabindex="17"
+              >Dental Assistant</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/enginerr.html"
+              id="a-SmwHPo"
+              aria-label="Engineering 6jf7LP"
+              tabindex="18"
+              >Engineering</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/esthetician.html"
+              id="a-akg6hm"
+              aria-label="Esthetician L51gdN"
+              tabindex="19"
+              >Esthetician</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/executive.html"
+              id="a-wiSlf6"
+              aria-label="Executive mhDWPs"
+              tabindex="20"
+              >Executive</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/financial.html"
+              id="a-pWX97I"
+              aria-label="Financial Analyst CDvywM"
+              tabindex="21"
+              >Financial Analyst</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/highschool.html"
+              id="a-2GeuA1"
+              aria-label="High School t1umBq"
+              tabindex="22"
+              >High School</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/housekeeping.html"
+              id="a-lrHKtV"
+              aria-label="Housekeeping prysSh"
+              tabindex="23"
+              >Housekeeping</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/informationtechnology.html"
+              id="a-I6yNiF"
+              aria-label="Information Technology IT 5sh0Kj"
+              tabindex="24"
+              >Information Technology IT</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/internship.html"
+              id="a-mHAFBs"
+              aria-label="Internship JqMBnQ"
+              tabindex="25"
+              >Internship</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/management.html"
+              id="a-0numFo"
+              aria-label="Management mLE167"
+              tabindex="26"
+              >Management</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a
+              href="profession/mba.html"
+              id="a-SR6M2C"
+              aria-label="MBA YrTxNX"
+              tabindex="27"
+              >MBA</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/medical.html"
+              id="a-bMwl7n"
+              aria-label="Medical Sales D4Oby6"
+              tabindex="28"
+              >Medical Sales</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/nursing.html"
+              id="a-Y6X4ec"
+              aria-label="Nursing tGV1sR"
+              tabindex="29"
+              >Nursing</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/nursingstudent.html"
+              id="a-qOxXzC"
+              aria-label="Nursing Student 4muDR0"
+              tabindex="30"
+              >Nursing Student</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/operationsmanager.html"
+              id="a-6siDdK"
+              aria-label="Operations Manager tTpoMj"
+              tabindex="31"
+              >Operations Manager</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/pharmacist.html"
+              id="a-w7qVz0"
+              aria-label="Pharmacist 0pXAnB"
+              tabindex="32"
+              >Pharmacist</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/phlebotomist.html"
+              id="a-UBYMaQ"
+              aria-label="Phlebotomist S7gmLx"
+              tabindex="33"
+              >Phlebotomist</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/productmanager.html"
+              id="a-oEGbw1"
+              aria-label="Product Manager eX5a84"
+              tabindex="34"
+              >Product Manager</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/projectmanager.html"
+              id="a-F5WfMi"
+              aria-label="Project Manager i2uvw6"
+              tabindex="35"
+              >Project Manager</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/receptionist.html"
+              id="a-etZLdb"
+              aria-label="Receptionist WAPSIY"
+              tabindex="36"
+              >Receptionist</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/registerednurse.html"
+              id="a-j65d4c"
+              aria-label="Registered Nurse yazNo6"
+              tabindex="37"
+              >Registered Nurse</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/sales.html"
+              id="a-oZMWk5"
+              aria-label="Sales gD9ZWJ"
+              tabindex="38"
+              >Sales</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/salesassociate.html"
+              id="a-5oM2rl"
+              aria-label="Sales Associate fo7Wir"
+              tabindex="39"
+              >Sales Associate</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/server.html"
+              id="a-uFgd8m"
+              aria-label="Server HbAvB9"
+              tabindex="40"
+              >Server</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/socialwork.html"
+              id="a-ocJrTP"
+              aria-label="Social Work b0iymc"
+              tabindex="41"
+              >Social Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="softwaredeveloper"
+              id="a-loXzSx"
+              aria-label="Software Developer QOEayW"
+              tabindex="42"
+              >Software Developer</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/softwareengineer.html"
+              id="a-ixWBFh"
+              aria-label="Software Engineer nsfhmP"
+              tabindex="43"
+              >Software Engineer</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/stayathomemom.html"
+              id="a-O7mJhn"
+              aria-label="Stay-at-Home Mom NTAZnr"
+              tabindex="44"
+              >Stay-at-Home Mom</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/student.html"
+              id="a-xZH6q7"
+              aria-label="Student APxUW0"
+              tabindex="45"
+              >Student</a
+            >
+          </li>
+          <li>
+            <a
+              href="profession/teacher.html"
+              id="a-ahNmB1"
+              aria-label="Teacher R184bB"
+              tabindex="46"
+              >Teacher</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#template">template</a></li>
+        <li><a href="">create cv</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+      <p>©2023 My Expert-CV | All Rights Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your JavaScript code for form switching -->
+  </body>
+  <script>
+    $(function () {
+      $("[rel='tooltip']").tooltip();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const signUpButton = document.getElementById("signUp");
+      const signInButton = document.getElementById("signIn");
+      const container = document.getElementById("container");
+
+      signUpButton.addEventListener("click", () =>
+        container.classList.add("right-panel-active")
+      );
+      signInButton.addEventListener("click", () =>
+        container.classList.remove("right-panel-active")
+      );
+    });
+  </script>
 </html>

@@ -45,7 +45,8 @@ const signIn = async (req, res) => {
             return res.status(400).json({ message: "Invalid credentials" })
         }
         const token = jwt.sign({ email: existinguser.email, id: existinguser._id }, process.env.SECRET_KEY)
-        res.status(201).json({ user: existinguser, token: token })
+        // res.status(201).json({ user: existinguser, token: token })
+        res.status(201).render("index",{"token":token,"existinguser":existinguser.email})
     } catch (error) {
         console.log(error)
         res.status(500).json({ message: "something went wrong" })
@@ -102,7 +103,7 @@ const otp_verify = async (req, res) => {
         if (otp_get == otp) {
             const hashedPassword = await bcrypt.hash(new_password, 10)
             const existinguser = await userModel.findOneAndUpdate({ email: email }, { password: hashedPassword })
-            return res.render('indexx')
+            return res.render('index',{"token":undefined,"existinguser":undefined})
         }
         else {
             return res.render('otp_verify')
@@ -112,4 +113,13 @@ const otp_verify = async (req, res) => {
     }
 }
 
-module.exports = { signUp, signIn, forgotPassword, otp_verify, forgotPass }
+const softwaredeveloper = async(req,res)=>{
+    return res.render("softwaredeveloper")
+}
+
+const Form = async(req,res)=>{
+    return res.render("Form")
+
+}
+
+module.exports = { signUp, signIn, forgotPassword, otp_verify, forgotPass,softwaredeveloper,Form }
